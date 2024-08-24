@@ -58,4 +58,4 @@ def display_data_from_db(request,category):
     connection.close()
 
     # Pass the data to the template
-    return render(request, 'index.html', {'data': data})
+    return render(request, 'FirstApp/home.html', {'data': data})
