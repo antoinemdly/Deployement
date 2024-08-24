@@ -2,6 +2,21 @@
 <html>
     <head>
         <title>Test</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelectorAll('.nav').forEach((button) => {
+                    button.addEventListener('click', function(){
+                        const view_number = this.dataset.view;
+
+                        document.querySelector('#view1').style.display = 'none';
+                        document.querySelector('#view2').style.display = 'none';
+                        document.querySelector('#view3').style.display = 'none';
+
+                        document.querySelector(`#view${view_number}`).style.display = 'block'
+                    })
+                })
+            })
+        </script>
     </head>
     <body>
         <h1 style="text-align: center; padding: 100px;">This is a test</h1>
@@ -10,5 +25,17 @@
                 Men's Single
             </button>
         </form>
+        <button class="nav" data-view="1">View 1</button>
+        <button class="nav" data-view="2">View 2</button>
+        <button class="nav" data-view="3">View 3</button>
+        <div id="view1">
+            <p>view 1</p>
+        </div>
+        <div id="view2">
+            <p>view 1</p>
+        </div>
+        <div id="view3">
+            <p>view 1</p>
+        </div>
     </body>
 </html>
