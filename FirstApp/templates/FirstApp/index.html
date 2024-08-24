@@ -5,5 +5,10 @@
     </head>
     <body>
         <h1 style="text-align: center; padding: 100px;">This is a test</h1>
+        <form action="{% url 'display_data_from_db' category='ms' %}">
+            <button type="submit" id="ms" name="categoryBTNs">
+                Men's Single
+            </button>
+        </form>
     </body>
 </html>

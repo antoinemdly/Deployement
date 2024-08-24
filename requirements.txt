@@ -1,2 +1,5 @@
 django
+django-compressor
 whitenoise
+requests
+beautifulsoup4
